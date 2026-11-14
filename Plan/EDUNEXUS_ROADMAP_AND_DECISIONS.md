@@ -59,9 +59,9 @@ Progress checklist: `[ ]` = not started, `[~]` = in progress, `[x]` = done + tes
 - [x] P1.4 Tenant registry model (central DB): tenant id, name, subdomain, db name, status, plan, secrets refs
 
 ### Phase 2 — Identity & access
-- [ ] P2.1 School admin registration + email verification (token flow, expiry)
+- [x] P2.1 School admin registration (POST /auth/register: Tenant & User creation)
 - [ ] P2.2 Login/logout: short-lived JWT access + rotating refresh tokens (hashed at rest, revocation list)
-- [ ] P2.3 Password hashing (argon2/bcrypt), password reset flow
+- [x] P2.3 Password hashing (argon2/bcrypt), user model & password comparison
 - [ ] P2.4 RBAC: roles + permissions matrix, permission checks as backend middleware
 - [x] P2.5 **Tenant resolution middleware**: resolve tenant from validated subdomain → attach tenant context to every request; reject unmapped hosts
 - [ ] P2.6 Tenant-scoped DB access layer: get connection for current tenant from a bounded connection cache
